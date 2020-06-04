@@ -129,38 +129,27 @@ void DLList::remove(DLListNode* node)
 	// If it is the only node in the list, it becomes empty
 	if (node == first && node == last)
 	{
-		delete node;
 		first = last = nullptr;
-		return;
 	}
 
-	// NOTE: At this point, the node can not be first AND last
 
-	// If this is the first, the next node becomes first
-	if (node == first)
+	// Make next node first
+	else if (node == first)
 	{
 		first = node->next;
 		first->previous = nullptr;
-		delete node;
-		return;
 	}
-	// Otherwise just update its previous
-	else
-	{
-		node->next->previous = node->previous;
-	}
-
-	// If this is the last, the previous node becomes last
-	if (node == last)
+	// Make previous node last
+	else if (node == last)
 	{
 		last = node->previous;
 		last->next = nullptr;
-		delete node;
-		return;
 	}
-	// Otherwise just update its next
+
+	// Make adjacent nodes point to eachother
 	else
 	{
+		node->next->previous = node->previous;
 		node->previous->next = node->next;
 	}
 

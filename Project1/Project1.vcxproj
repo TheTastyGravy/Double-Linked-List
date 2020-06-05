@@ -128,6 +128,7 @@
     <ClCompile Include="DLList.cpp" />
     <ClCompile Include="DLListNode.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="TextboxClass.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\raylib\raylib.vcxproj">
@@ -138,6 +139,7 @@
     <ClInclude Include="ButtonClass.h" />
     <ClInclude Include="DLList.h" />
     <ClInclude Include="DLListNode.h" />
+    <ClInclude Include="TextboxClass.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

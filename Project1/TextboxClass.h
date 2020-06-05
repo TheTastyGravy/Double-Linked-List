@@ -11,6 +11,9 @@ public:
 	// Set the position and size of the textbox
 	void setBounds(Rectangle bounds);
 
+	// Is there any text currently?
+	bool isEmpty();
+
 	// Update the current text using keys pressed
 	void update();
 	// Get the current text, and clear it

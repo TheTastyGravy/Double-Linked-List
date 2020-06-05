@@ -6,7 +6,7 @@
 class ButtonClass
 {
 public:
-	ButtonClass(Rectangle bounds, std::string text);
+	ButtonClass(Rectangle bounds, std::string text, int fontSize = 20);
 
 
 	// Set the position and size of the button

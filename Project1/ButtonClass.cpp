@@ -1,11 +1,11 @@
 #include "ButtonClass.h"
 
-ButtonClass::ButtonClass(Rectangle bounds, std::string text) :
+ButtonClass::ButtonClass(Rectangle bounds, std::string text, int fontSize) :
 	bounds(bounds),
 	text(text),
-	fontSize(20),
+	fontSize(fontSize),
 	normalColor(RAYWHITE),
-	mouseOverColor(GRAY)
+	mouseOverColor(LIGHTGRAY)
 {
 }
 

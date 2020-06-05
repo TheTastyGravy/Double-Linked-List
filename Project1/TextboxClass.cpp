@@ -15,6 +15,12 @@ void TextboxClass::setBounds(Rectangle bounds)
 }
 
 
+bool TextboxClass::isEmpty()
+{
+	return (text.length() == 0);
+}
+
+
 void TextboxClass::update()
 {
 	int key = GetKeyPressed();

@@ -122,8 +122,8 @@ void DLList::popEnd()
 
 void DLList::remove(DLListNode* node)
 {
-	// If the list is empty, do nothing
-	if (isEmpty())
+	// If the list is empty or nullptr, do nothing
+	if (isEmpty() || node == nullptr)
 		return;
 
 	// If it is the only node in the list, it becomes empty

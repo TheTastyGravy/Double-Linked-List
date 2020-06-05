@@ -96,7 +96,11 @@ int main()
 
 		// Sort button. List cant be empty when sort
 		if (sortBtn.isClicked() && !list.isEmpty())
+		{
 			list.sort();
+			// Current may have been moved, in which case it is now dangling
+			current = nullptr;
+		}
 
 
 

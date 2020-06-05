@@ -159,7 +159,6 @@ void DLList::remove(DLListNode* node)
 }
 
 
-
 int DLList::count()
 {
 	if (isEmpty())
@@ -185,8 +184,40 @@ bool DLList::isEmpty()
 }
 
 
-
 void DLList::sort()
 {
+	// There is nothing infront of the first node, so start at the second
+	DLListNode* current = first->next;
 
+	// Iterate through all nodes
+	while (current != nullptr)
+	{
+		// The start of the loop moves down to the next node
+		DLListNode* comp = current;
+
+		while (true)
+		{
+			// Get the next node down the list
+			comp = comp->previous;
+
+			if (comp->value < current->value)
+			{
+				// Insert it after the node smaller than it
+				comp = comp->next;
+				break;
+			}
+			else if (comp == first)
+			{
+				// Insert at the front as it is the smallest
+				break;
+			}
+		}
+
+		// Insert the current node in its correct spot
+		insert(current->value, comp);
+		// Store the next node and delete the old one
+		comp = current->next;
+		remove(current);
+		current = comp;
+	}
 }

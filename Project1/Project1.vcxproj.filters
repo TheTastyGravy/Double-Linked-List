@@ -24,12 +24,18 @@
     <ClCompile Include="DLListNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ButtonClass.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DLList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DLListNode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonClass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

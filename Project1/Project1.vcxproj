@@ -124,6 +124,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ButtonClass.cpp" />
     <ClCompile Include="DLList.cpp" />
     <ClCompile Include="DLListNode.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -134,6 +135,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ButtonClass.h" />
     <ClInclude Include="DLList.h" />
     <ClInclude Include="DLListNode.h" />
   </ItemGroup>

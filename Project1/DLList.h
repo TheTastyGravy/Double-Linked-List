@@ -33,7 +33,7 @@ public:
 	// Returns the last node in the list
 	DLListNode* getLast() { return last; }
 
-	// Sort the list
+	// Sort the list using insertion sort
 	void sort();
 
 private:

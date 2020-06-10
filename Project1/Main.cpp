@@ -24,7 +24,7 @@ int main()
 	DLListNode* current = nullptr;
 
 	// Used to get input for new node values
-	TextboxClass textBox(Rectangle{ 325, 350, 150, 50 }, 10, 23);
+	TextboxClass textBox(Rectangle{ 325, 350, 150, 50 }, 9, 23);
 
 	// Navigation buttons
 	ButtonClass goToFirstBtn(Rectangle{ 25, 50, 100, 30 }, "go to first", 15);

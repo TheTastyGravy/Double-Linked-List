@@ -79,7 +79,8 @@ int main()
 		}
 		else if (delCurrentBtn.isClicked())
 		{
-			list.remove(current);
+			list.removeFromList(current);
+			delete current;
 			current = nullptr;
 		}
 			

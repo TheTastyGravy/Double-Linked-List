@@ -120,7 +120,7 @@ void DLList::popEnd()
 	last->next = nullptr;
 }
 
-void DLList::remove(DLListNode* node)
+void DLList::removeFromList(DLListNode* node)
 {
 	// If the list is empty or nullptr, do nothing
 	if (isEmpty() || node == nullptr)
@@ -152,10 +152,6 @@ void DLList::remove(DLListNode* node)
 		node->next->previous = node->previous;
 		node->previous->next = node->next;
 	}
-
-
-	// Delete the node
-	delete node;
 }
 
 
@@ -213,11 +209,39 @@ void DLList::sort()
 			}
 		}
 
+		// Get the next node before moving current
+		DLListNode* nextNode = current->next;
+
 		// Insert the current node in its correct spot
-		insert(current->value, comp);
-		// Store the next node and delete the old one
-		comp = current->next;
-		remove(current);
-		current = comp;
+		if (current != comp)
+			move(current, comp);
+
+		current = nextNode;
 	}
+}
+
+void DLList::move(DLListNode* movedNode, DLListNode* baseNode)
+{
+	// Remove refrences to nodeMove
+	removeFromList(movedNode);
+
+	// Change pointers of the node
+	movedNode->next = baseNode;
+	movedNode->previous = baseNode->previous;
+
+	
+	// If its the first element, 'push' it
+	if (baseNode == first)
+	{
+		// Set up the pointers, and change the first node
+		first->previous = movedNode;
+		movedNode->next = first;
+		first = movedNode;
+		return;
+	}
+	// As the value is inserted before a node, it cant be at the end
+
+	// Update the pointers of the two adjasent nodes
+	movedNode->previous->next = movedNode;
+	movedNode->next->previous = movedNode;
 }

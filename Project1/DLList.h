@@ -21,7 +21,7 @@ public:
 	// Remove the node at the end of the list
 	void popEnd();
 	// Remove 'node' from the list
-	void remove(DLListNode* node);
+	void removeFromList(DLListNode* node);
 
 	// Returns the number of elements in the list
 	int count();
@@ -37,6 +37,9 @@ public:
 	void sort();
 
 private:
+	// Move 'movedNode' to the location of 'baseNode'
+	void move(DLListNode* movedNode, DLListNode* baseNode);
+
 	// These should only be changed when nodes are added or removed,
 	// and are therefore private with public getters
 	DLListNode* first;

@@ -46,6 +46,6 @@ void ButtonClass::draw()
 	DrawRectangleLinesEx(bounds, 2, BLACK);
 	
 	// Draw the text inside the box
-	DrawText(text.c_str(), (int)bounds.x + (int)bounds.width/2 - MeasureText(text.c_str(), fontSize/2), (int)bounds.y + (int)bounds.height/2 - fontSize/2, fontSize, BLACK);
+	DrawText(text.c_str(), (int)bounds.x + (int)bounds.width/2 - MeasureText(text.c_str(), fontSize)/2, (int)bounds.y + (int)bounds.height/2 - fontSize/2, fontSize, BLACK);
 	// bounds.x + bounds.width/2 - MeasureText(...)/2 is used to center the text
 }

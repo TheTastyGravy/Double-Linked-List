@@ -62,5 +62,5 @@ void TextboxClass::draw()
 	DrawRectangleRec(bounds, WHITE);
 	DrawRectangleLinesEx(bounds, 2, BLACK);
 	// Draw the current text
-	DrawText(text.c_str(), bounds.x + 5, bounds.y + bounds.height / 2 - fontSize / 2, fontSize, BLACK);
+	DrawText(text.c_str(), (int)bounds.x + 5, (int)bounds.y + (int)bounds.height/2 - fontSize/2, fontSize, BLACK);
 }

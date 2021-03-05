@@ -1,7 +1,11 @@
 # Double-Linked-List
 Implementation of a custom double-linked list in C++, and demonstraited using raylib.
 
+## Building
+The demonstration program uses Raylib, and expects the compiled .dll to be in the build directory of the Raylib project.
+This is to say build the Raylib project before running the program.
 
+## Usage
 In order to start from nullptr, the *go to first* and *go to last* buttons have to be used to jump to their respective element.
 The list can be navigated using the *next* and *previous* buttons.
 
